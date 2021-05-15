@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart</title>
+
+    <style>
+        .heart{
+            position: relative;
+            height: 160px;
+            width: 100px;
+            background:  red;
+            border-radius: 200px 200px 0 0;
+            transform: rotate(45deg);
+            display: inline-block;
+            margin: 10px 77px;
+            transition: 1s ease-in-out;
+        }
+        .heart::before{
+            content: '';
+            position: absolute;
+            background: red;
+            height: 160px;
+            width: 100px;
+            border-radius: 200px 200px 0 0;
+            transform: rotate(-90deg);
+            top: 30px;
+            left: -30px;
+        }
+        .heart:hover{
+            transform: rotate(400deg);
+        }
+        .line{
+            margin: 25px 0px 25px 30px;
+        }
+        .line1 > .heart, .line1 > .heart::before{
+            background: #CE204D !important;
+        }
+        .line2 > .heart,.line2 > .heart::before{
+            background-color: red;
+        }
+        .line3 > .heart,.line3 > .heart::before{
+            background-color: #7C0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="line line1">
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+    </div>
+    
+    <div class="line line2">
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+    </div>
+    <div class="line line3">
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+    </div>
+    
+</body>
+</html>
